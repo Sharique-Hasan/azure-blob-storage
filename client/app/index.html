@@ -8,18 +8,12 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <!-- endbower -->
   <link rel="stylesheet" href="styles/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="styles/css/generics.css"/>
-  <link rel="stylesheet" href="styles/css/iconfont.css"/>
-  <link rel="stylesheet" href="styles/css/css"/>
-  <link rel="stylesheet" href="styles/css/css(1)"/>
-  <link rel="stylesheet" href="styles/css/css(2)"/>
-  <link rel="stylesheet" href="styles/css/custom.css"/>
+  <link rel="stylesheet" href="styles/css/2-col-portfolio.css"/>
   <link rel="stylesheet" href="styles/css/main.css"/>
   <!-- endbuild -->
 </head>
 
   <body class="container">
-    <h3> ngSuper Generator </h3>
     <div ui-view></div>
   </body>
 
@@ -34,6 +28,7 @@
   <script src="bower_components/restangular/dist/restangular.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
   <!-- endbower -->
   <script src="src/core/core.module.js"></script>
   <script src="src/common/common.module.js"></script>
@@ -43,76 +38,6 @@
   <script src="src/core/httpStatus.constant.js"></script>
   <script src="src/welcome/welcome.module.js"></script>
   <script src="src/welcome/welcome.controller.js"></script>
-  <script>
-    jQuery(document).ready(function(){
-
-      jQuery('#ubl-portfolio-57').removeClass('margin-bottom-30');
-      jQuery('#ubl-portfolio-44').removeClass('margin-bottom-30');
-      jQuery('#ubl-portfolio-42').removeClass('margin-bottom-30');
-      jQuery('#ubl-portfolio-57').addClass('margin-bottom-sm-30');
-      jQuery('#ubl-portfolio-44').addClass('margin-bottom-xs-30');
-
-      jQuery('#post-90').removeClass('margin-bottom-60');
-      jQuery('#post-90').addClass('margin-bottom-xs-60');
-      jQuery('#post-88').removeClass('margin-bottom-60');
-
-      jQuery('.ubl-tool-icon').on('click', function(){
-
-        jQuery('.ubltb_closed').live('click',function(){
-
-          jQuery('.ubl-tools').animate({'margin-left':'0px'}, 500);
-          jQuery('.ubl-tool-icon').removeClass('ubltb_closed');
-          jQuery('.ubl-tool-icon').addClass('ubltb_open');
-
-        });
-
-        jQuery('.ubltb_open').live('click',function(){
-
-          jQuery('.ubl-tools').animate({'margin-left':'-210px'});
-          jQuery('.ubl-tool-icon').addClass('ubltb_closed');
-          jQuery('.ubl-tool-icon').removeClass('ubltb_open');
-
-        });
-
-        jQuery('#ubl-theme-color li').live('click', function(){
-
-          var themecolours = jQuery(this).attr('data-thcolor');
-          jQuery('.wrapper').css('border-top','7px solid #' + themecolours);
-          jQuery('.overlay,.read-more,.see-larger,.vbox-overlay,.form-submit #submit').css('background-color', '#' + themecolours);
-          jQuery('.read-more').css('background-color', '#' + themecolours);
-          jQuery('.see-larger').css('background-color', '#' + themecolours);
-          jQuery('.vbox-overlay').css('background-color', '#' + themecolours);
-          jQuery('form-submit #submit').css('background-color', '#' + themecolours);
-          jQuery('.overlay').css('color','#ffffff');
-          jQuery('.read-more').css('color','#ffffff');
-          jQuery('.see-larger').css('color','#ffffff');
-          jQuery('.form-submit #submit').css('color','#ffffff');
-
-        });
-
-        jQuery('#ubl-theme-bg li').live('click', function(){
-
-          var themebgimage = jQuery(this).attr('data-bgimage');
-
-          if(themebgimage === 0){
-
-            jQuery('.wrapper').css('background-image','none');
-
-          }
-
-          else if(themebgimage !== 0){
-
-            jQuery('.wrapper').css('background-image','url(/porta-34/wp-content/themes/ubl-porta/img/tools/' + themebgimage + '.png)');
-            jQuery('.wrapper').css('background-repeat','repeat');
-
-          }
-
-        });
-
-      });
-
-    });
-  </script>
   <!-- endbuild -->
 
 </html>
