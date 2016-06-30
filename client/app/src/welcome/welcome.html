@@ -13,17 +13,7 @@
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Services</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
+
     </div>
     <!-- /.navbar-collapse -->
   </div>
@@ -36,120 +26,29 @@
   <!-- Page Header -->
   <div class="col-sm-12">
     <div ngf-drop ngf-select ng-model="galleryImage" class="drop-box"
-         ngf-drag-over-class="dragover" ngf-multiple="true" ngf-allow-dir="true" ngf-change="upload($files)"
-         accept="image/*">Drop images here or click to upload
+         ngf-drag-over-class="dragover" ngf-multiple="false" ngf-allow-dir="false" ngf-change="vm.upload($files)"
+         accept="*">Drop files here or click to upload
     </div>
   </div>
   <!-- /.row -->
 
   <!-- Projects Row -->
   <div class="row">
-    <div class="col-md-6 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-      </a>
+    <div ng-repeat="item in vm.pictures" class="col-sm-10 portfolio-item">
       <h3>
-        <a href="#">Project One</a>
+        <a href="{{item}}">Item # {{$index}}</a>
       </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-    <div class="col-md-6 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-      </a>
-      <h3>
-        <a href="#">Project Two</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+      <div>{{item}}</div>
     </div>
   </div>
   <!-- /.row -->
-
-  <!-- Projects Row -->
-  <div class="row">
-    <div class="col-md-6 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-      </a>
-      <h3>
-        <a href="#">Project Three</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-    <div class="col-md-6 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-      </a>
-      <h3>
-        <a href="#">Project Four</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-  </div>
-  <!-- /.row -->
-
-  <!-- Projects Row -->
-  <div class="row">
-    <div class="col-md-6 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-      </a>
-      <h3>
-        <a href="#">Project Five</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-    <div class="col-md-6 portfolio-item">
-      <a href="#">
-        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-      </a>
-      <h3>
-        <a href="#">Project Six</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-  </div>
-  <!-- /.row -->
-
-  <hr>
-
-  <!-- Pagination -->
-  <div class="row text-center">
-    <div class="col-lg-12">
-      <ul class="pagination">
-        <li>
-          <a href="#">&laquo;</a>
-        </li>
-        <li class="active">
-          <a href="#">1</a>
-        </li>
-        <li>
-          <a href="#">2</a>
-        </li>
-        <li>
-          <a href="#">3</a>
-        </li>
-        <li>
-          <a href="#">4</a>
-        </li>
-        <li>
-          <a href="#">5</a>
-        </li>
-        <li>
-          <a href="#">&raquo;</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- /.row -->
-
   <hr>
 
   <!-- Footer -->
   <footer>
     <div class="row">
       <div class="col-lg-12">
-        <p>Copyright &copy; Your Website 2014</p>
+        <p>Copyright 2016</p>
       </div>
     </div>
     <!-- /.row -->

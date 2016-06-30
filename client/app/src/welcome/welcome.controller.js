@@ -12,25 +12,20 @@
     .controller('Welcome', Welcome);
 
   /* @ngInject */
-  function Welcome(){
+  function Welcome(service){
     var vm = this;
-
-    vm.welcomeMessage = 'ZE GENGO !';
-    vm.testFunction = testFunction;
-
-    /////////////////////
-
-    /**
-     * @ngdoc method
-     * @name testFunction
-     * @param {number} num number is the number of the number
-     * @methodOf app.welcome.controller:Welcome
-     * @description
-     * My Description rules
-     */
-
-    function testFunction(num){
-      console.info('This is a test function number ' + num);
+    vm.pictures = [];
+    vm.upload = function (files){
+      if(!files.length){
+        return false;
+      }
+      service.upload(files[0])
+        .success(function(response){
+          vm.pictures = vm.pictures.concat(response);
+        })
+        .error(function(err){
+          console.error(err);
+        })
     }
   }
 

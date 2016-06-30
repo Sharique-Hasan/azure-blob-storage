@@ -31,7 +31,6 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/upload', upload.single('file'), function(req, res) {
-
   var name = (req.file.filename + req.file.originalname);
   blobSvc.createBlockBlobFromLocalFile(container, name, req.file.path, function(error, result, response){
     if(!error){
